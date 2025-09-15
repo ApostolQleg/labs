@@ -7,7 +7,6 @@ console.log(myAge);
 var myAge = 17;
 console.log(myAge);
 
-// call function before it exists
 myFunction(myAge);
 
 function myFunction(age) {

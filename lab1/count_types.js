@@ -2,7 +2,7 @@
 
 const countTypes = (array) => {
 
-  //crate an object to hold types and their counts
+  // create an object to hold types and their counts
   const types = {}
 
   // count types

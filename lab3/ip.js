@@ -1,19 +1,17 @@
 // Without using reduce
 const makeIp = (ip) => {
-    ip = ip
-        .split('.')
-        .map(Number);
-    return ((ip[0] << 24) + (ip[1] << 16) + (ip[2] << 8) + ip[3]);
+  ip = ip.split(".").map(Number);
+  return (ip[0] << 24) + (ip[1] << 16) + (ip[2] << 8) + ip[3];
 };
-console.log(makeIp('192.168.1.1'));
+console.log(makeIp("192.168.1.1"));
 
 // Using reduce
 const makeIpReduce = (ip) => {
-    ip = ip
-        .split('.')
-        .map(Number)
-        .reduce((acc, byte, index) => acc + (byte << (8 * (3 - index))), 0);
-    return ip;
+  ip = ip
+    .split(".")
+    .map(Number)
+    .reduce((acc, byte, index) => acc + (byte << (8 * (3 - index))), 0);
+  return ip;
 };
 
-console.log(makeIpReduce('192.168.1.1'));
+console.log(makeIpReduce("192.168.1.1"));

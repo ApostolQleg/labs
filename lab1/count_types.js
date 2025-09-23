@@ -1,9 +1,8 @@
 // function that counts types of elements in an array
 
 const countTypes = (array) => {
-
   // create an object to hold types and their counts
-  const types = {}
+  const types = {};
 
   // count types
   for (const element of array) {
@@ -17,6 +16,24 @@ const countTypes = (array) => {
 };
 
 // Exaple: count types in a big array
-const myArray = [1, 'hello', true, 42, null, undefined, [1, 2, 3], function () { return 'hi'; }, Symbol('sym'), 3.14, false, 'world', [4, 5], () => 'arrow', BigInt(9007199254740991)];
+const myArray = [
+  1,
+  "hello",
+  true,
+  42,
+  null,
+  undefined,
+  [1, 2, 3],
+  function () {
+    return "hi";
+  },
+  Symbol("sym"),
+  3.14,
+  false,
+  "world",
+  [4, 5],
+  () => "arrow",
+  BigInt(9007199254740991),
+];
 
 console.dir(countTypes(myArray));

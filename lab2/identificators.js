@@ -1,12 +1,10 @@
-// Identificators
-
-// Common variable
+// Звичайна змінна
 let myName = "Oleg";
 
-// Constant variable
+// Константа
 const myBirthDate = 2008;
 
-// Function that greets with the single argument
+// Функція, що використовує змінну
 const hello = (name) => {
   console.log(`Hello, ${name}!`);
 };

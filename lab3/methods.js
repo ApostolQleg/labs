@@ -1,3 +1,4 @@
+// об'єкт Шемсадінова
 const iface = {
   m1: (x) => [x],
   m2: function (x, y) {
@@ -8,11 +9,12 @@ const iface = {
   },
 };
 
+// функція, що повертає масив методів об'єкта та кількість їх параметрів
 const methods = (obj) => {
   const arr = [];
-  for (let key in obj) {
-    if (typeof obj[key] === "function") {
-      arr.push([key, obj[key].length]);
+  for (let method in obj) {
+    if (typeof obj[method] === "function") {
+      arr.push([method, obj[method].length]);
     }
   }
   return arr;

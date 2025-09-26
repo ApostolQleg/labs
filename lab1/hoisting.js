@@ -1,12 +1,11 @@
-// hoisting functions and variables
-
-// output is undefined
+// вивід: undefined
 console.log(myAge);
 
-// output is 17
+// вивід: 17
 var myAge = 17;
 console.log(myAge);
 
+// функція з підняттям
 myFunction(myAge);
 
 function myFunction(age) {

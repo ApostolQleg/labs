@@ -1,6 +1,3 @@
-// Collections
-
-// Phonebook
 const phonebook = [
   { name: "Oleg", phone: "+380971495868" },
   { name: "Kate", phone: "+380631234567" },
@@ -9,7 +6,6 @@ const phonebook = [
   { name: "Peter", phone: "+380631112233" },
 ];
 
-// function to find phone by name in the phonebook
 let findPhoneByName = (name) => {
   for (let person of phonebook) {
     if (person.name === name) return person.phone;
@@ -18,7 +14,6 @@ let findPhoneByName = (name) => {
 
 console.dir(findPhoneByName("Oleg"));
 
-// function that creates a hash map from the phonebook
 const createHash = (people) => {
   const hash = {};
   for (let person of people) {
@@ -29,7 +24,6 @@ const createHash = (people) => {
 
 phonebookHash = createHash(phonebook);
 
-// Implement findPhoneByName using the hash map
 findPhoneByName = (name) => {
   return phonebookHash[name];
 };

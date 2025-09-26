@@ -1,21 +1,13 @@
-// function that counts types of elements in an array
-
 const countTypes = (array) => {
-  // create an object to hold types and their counts
   const types = {};
-
-  // count types
   for (const element of array) {
-    // add type to object if not already present
     const type = typeof element;
-
-    // increment count for this type
     types[type] = (types[type] || 0) + 1;
   }
   return types;
 };
 
-// Exaple: count types in a big array
+// Приклад використання
 const myArray = [
   1,
   "hello",

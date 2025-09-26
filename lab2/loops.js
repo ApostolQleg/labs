@@ -1,6 +1,4 @@
-// Cycles
-
-// Function that creates an array of all the numbers from some number to another
+// функція, що створює масив чисел від start до end включно
 let range = (start, end) => {
   let array = [];
   for (let i = start; i <= end; i++) array.push(i);
@@ -9,7 +7,7 @@ let range = (start, end) => {
 
 console.dir(range(15, 30));
 
-// Function that creates an array of odd numbers from some number to another
+// функція, що створює масив непарних чисел від start до end включно
 let rangeOdd = (start, end) => {
   let array = [];
   for (let i = start; i <= end; i++) if (i % 2) array.push(i);

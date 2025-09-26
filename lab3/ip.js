@@ -1,11 +1,12 @@
-// Without using reduce
+// Без reduce
 const makeIp = (ip) => {
   ip = ip.split(".").map(Number);
   return (ip[0] << 24) + (ip[1] << 16) + (ip[2] << 8) + ip[3];
 };
+
 console.log(makeIp("192.168.1.1"));
 
-// Using reduce
+// з reduce
 const makeIpReduce = (ip) => {
   ip = ip
     .split(".")

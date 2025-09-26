@@ -1,30 +1,19 @@
 const seq = (...args) => {
-	const functions = [];
-
-	if (args.length > 0 && typeof args[0] === "function") {
-		functions.push(args.shift());
-	} else if (args.length > 0 && typeof args[0] === "number") {
+	if (args.length > 0 && typeof args[0] === "number") {
 		return args[0];
 	}
 
-	// закидує всі функції в масив
-	const packFunctions = (f) => {
-		if (typeof f === "function") {
-			functions.push(f);
-			return packFunctions;
+	const functions = [...args];
+
+	const packFunction = (...new_args) => {
+		if (typeof new_args[0] === "function") {
+			functions.push(...new_args);
+			return packFunction;
 		} else {
-			return releaseFunctions(functions.reverse(), f);
+			return functions.reduceRight((result, fn) => fn(result), new_args[0]);
 		}
 	};
-	return packFunctions;
-};
-
-// виконує всі функції з масиву
-const releaseFunctions = (functions, num) => {
-	for (let func of functions) {
-		num = func(num);
-	}
-	return num;
+	return packFunction;
 };
 
 // перевірки Шемсадінова

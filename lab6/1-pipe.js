@@ -21,7 +21,7 @@ function pipe(...functions) {
 			}
 			return x;
 		} catch (error) {
-			return "error";
+			return error;
 		}
 	};
 	return calc;

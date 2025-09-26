@@ -19,7 +19,7 @@ function max(array) {
 
 // з flat та reduce
 function maxReduce(array) {
-	return array.flat().reduce((acc, value) => Math.max(acc, value));
+	return array.flat(Infinity).reduce((acc, value) => Math.max(acc, value));
 }
 
 console.log(maxReduce(m));

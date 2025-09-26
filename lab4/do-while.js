@@ -5,13 +5,13 @@ const c = sum(); // c === 0
 const d = sum(1, -1, 1); // d === 1
 const e = sum(10, -1, -1, -1); // e === 7
 
+console.log(a, b, c, d, e);
+
 function sum(...args) {
-    if (args.length === 0) return 0;
+	if (args.length === 0) return 0;
 	let sum = 0;
 	do {
 		sum += args.shift();
 	} while (args.length);
 	return sum;
 }
-
-console.log(a, b, c, d, e);

@@ -1,9 +1,9 @@
 const generateKey = (length, characters) => {
-  let result = "";
-  for (let i = 0; i < length; i++) {
-    result += characters[Math.floor(Math.random() * characters.length)];
-  }
-  return result;
+    let result = "";
+    for (let i = 0; i < length; i++) {
+        result += characters[Math.floor(Math.random() * characters.length)];
+    }
+    return result;
 };
 
 const characters = "abcdefghijklmnopqrstuvwxyz0123456789";

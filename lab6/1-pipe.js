@@ -1,4 +1,4 @@
-// Умова Шемсадінова
+// Умова Шемседінова
 const inc = (x) => ++x;
 const twice = (x) => x * 2;
 const cube = (x) => x ** 3;

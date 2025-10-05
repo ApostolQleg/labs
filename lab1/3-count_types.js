@@ -28,4 +28,4 @@ const myArray = [
 	BigInt(9007199254740991),
 ];
 
-console.dir(countTypes(myArray));
+console.log(countTypes(myArray));

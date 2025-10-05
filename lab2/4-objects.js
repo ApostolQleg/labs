@@ -18,4 +18,4 @@ const createUser = (name, city) => {
 	return { name, city };
 };
 
-console.dir(createUser("Oleg", "Kaniv"));
+console.log(createUser("Oleg", "Kaniv"));
